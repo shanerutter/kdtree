@@ -36,13 +36,14 @@ class ItemList implements ItemListInterface
      *
      * @api
      * @param ItemInterface $item
+     * @param $allowDuplicateIDs
      */
-    public function addItem(ItemInterface $item)
+    public function addItem(ItemInterface $item, $allowDuplicateIDs = false)
     {
         $this->validateItem($item);
         $id = $item->getId();
 
-        if (isset($this->ids[$id])) {
+        if (!$allowDuplicateIDs && isset($this->ids[$id])) {
             $index = $this->ids[$id];
             $this->items[$index] = $item;
         } else {
