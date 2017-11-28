@@ -1,10 +1,11 @@
 {
-    "name": "hexogen/kdtree",
+    "name": "shanerutter/kdtree",
     "type": "library",
     "description": "file system KDTree index",
     "keywords": [
         "hexogen",
-        "kdtree"
+        "kdtree",
+		"shanerutter"
     ],
     "homepage": "https://github.com/hexogen/kdtree",
     "license": "MIT",
